@@ -6,8 +6,8 @@ from tornado import web,gen,httpclient
 import redis
 import StringIO
 import tinify
-tinify.key = "F0ztVDNuNsro1OnVuLYY2Z5Hwhv2507C"
-pool = redis.ConnectionPool(host="192.168.27.102",port=6379,password='hskjredis')
+tinify.key = "ddawF0ztVDNuNsro1OnVuLYY2Z5Hwhv2507C"
+pool = redis.ConnectionPool(host="192.168.27.102",port=6379,password='hskjredis',db=2)
 r = redis.Redis(connection_pool=pool)
 class Handler(tornado.web.RequestHandler):
     @gen.coroutine
